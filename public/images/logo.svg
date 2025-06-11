@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 8h100v24H10z" fill="#003C7D"/>
-  <text x="20" y="26" font-family="Arial" font-size="16" font-weight="bold" fill="white">NEWS</text>
-  <circle cx="95" cy="20" r="8" fill="#FFB800"/>
-</svg>

@@ -1,0 +1,107 @@
+.trending-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  overflow: hidden;
+
+  @include mobile {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba($primary-color, 0.2);
+    background: $white;
+    color: $primary-color;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @include mobile {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+    }
+  }
+  &__scroll {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y pinch-zoom;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+    width: fit-content;
+    padding: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+
+    @include mobile {
+      gap: 1rem;
+    }    .news-card {
+      flex: 0 0 calc(50% - 0.75rem);
+      margin: 0;
+      max-width: 500px;
+
+      @include mobile {
+        flex: 0 0 calc(100% - 1rem);
+        min-width: 280px;
+      }      &__image {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        display: block;
+
+        @include mobile {
+          max-height: 300px;
+          object-position: top center;
+        }
+      }
+    }
+  }
+}
