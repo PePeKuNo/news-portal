@@ -27,5 +27,5 @@ function setupNavigation() {
 }
 
 export function initializeNavigation() {
-  document.addEventListener('DOMContentLoaded', setupNavigation);
+  setupNavigation();
 }

@@ -61,9 +61,7 @@
       &:nth-child(3) {
         bottom: 0;
       }
-    }
-
-    &--open {
+    }    &--open {
       span {
         &:nth-child(1) {
           transform: rotate(45deg);
@@ -90,10 +88,14 @@
     height: 100vh;
     background: $white;
     padding: 5rem 2rem;
-    transition: right 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 999;
-
-    &--open {
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;&--open {
+      right: 0;
+      visibility: visible;
+      opacity: 1;
       right: 0;
     }
 
