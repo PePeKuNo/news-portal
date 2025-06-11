@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Informacyjny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="/" class="header__logo">
+          <img src="/images/logo.svg" alt="Portal Informacyjny" width="120" height="40" />
+        </a>
+        <button class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--active">Aktualności</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Sport</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Premium</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Gospodarka</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Kultura</a>
+              </li>
+            </ul>
+          </nav>
+        <div class="weather">
+          <img src="/images/weather-sunny.svg" alt="Weather" class="weather__icon">
+          <span class="weather__temp">24°</span>
+          <span class="weather__location">Warszawa</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="news-grid">
+      <article class="news-card news-card--featured">
+        <img src="/images/Weekly Inspiration Dose 173 - Indieground Design….jfif" alt="Weekly Inspiration" class="news-card__image" loading="lazy">
+        <div class="news-card__content">
+          <span class="news-card__badge">Design</span>
+          <h2 class="news-card__title">Najnowsze trendy w projektowaniu: Inspiracje 2025</h2>
+          <span class="news-card__time">2 godziny temu</span>
+        </div>
+      </article>
+
+      <article class="news-card news-card--vertical">
+        <img src="/images/Protest Art_ After Ferguson, Artists Respond to….jfif" alt="Art Expression" class="news-card__image" loading="lazy">
+        <div class="news-card__content">
+          <span class="news-card__badge">Sztuka</span>
+          <h2 class="news-card__title">Sztuka jako głos społeczeństwa: Nowa wystawa</h2>
+          <span class="news-card__time">4 godziny temu</span>
+        </div>
+      </article>
+
+      <article class="news-card news-card--horizontal">
+        <img src="/images/Qatar 2022_ así quedan los grupos en el sorteo del….jfif" alt="Sports Event" class="news-card__image" loading="lazy">
+        <div class="news-card__content">
+          <span class="news-card__badge">Sport</span>
+          <h2 class="news-card__title">Wielkie emocje sportowe: Najważniejsze wydarzenia roku</h2>
+          <span class="news-card__time">dziś</span>
+        </div>
+      </article>
+
+      <article class="news-card news-card--horizontal">
+        <img src="/images/61fbb31f-cb3b-4b51-b16c-34c2baf36d55.jfif" alt="Nature View" class="news-card__image" loading="lazy">
+        <div class="news-card__content">
+          <span class="news-card__badge">Muzyka</span>
+          <h2 class="news-card__title">Festiwal muzyczny: Największe wydarzenia tego lata</h2>
+          <span class="news-card__time">wczoraj</span>
+        </div>
+      </article>
+
+      <article class="news-card news-card--vertical">
+        <img src="/images/053cbb83-57fc-4f74-9b01-d577c4dd0dd5.jfif" alt="Art and Culture" class="news-card__image" loading="lazy">
+        <div class="news-card__content">
+          <span class="news-card__badge">Kultura</span>
+          <h2 class="news-card__title">Nowe oblicze sztuki: Między tradycją a nowoczesnością</h2>
+          <span class="news-card__time">3 dni temu</span>
+        </div>
+      </article>
+      
+      <article class="news-card news-card--vertical revealed">
+        <div class="news-card__content">
+          <span class="news-card__badge">Trendy</span>
+          <h3 class="news-card__title">Dwie dominujące trendy w treściach internetowych</h3>
+          <p class="news-card__excerpt">
+            Treści stają się krótsze w mediach społecznościowych, ale dłuższe poza nimi. 
+            Z TikTokiem i innymi platformami społecznościowymi, marki muszą umieć tworzyć 
+            krótkie treści, jednocześnie rozwijając długie formaty dla bardziej zaangażowanych odbiorców.
+          </p>
+          <div class="news-card__author">
+            <img src="https://i.pravatar.cc/40" alt="Author" class="news-card__author-image">
+            <span class="news-card__author-name">Kimberlee Meier</span>
+          </div>
+          <span class="news-card__time">Opublikowano dziś</span>
+        </div>
+      </article>
+    </main>
+
+    <section class="trending-section">
+      <div class="trending-section__header">
+        <h2 class="trending-section__title">Trending Now</h2>
+        <div class="trending-section__nav">
+          <button class="trending-section__button" id="scrollLeft">←</button>
+          <button class="trending-section__button" id="scrollRight">→</button>
+        </div>
+      </div>
+      <div class="trending-section__scroll" id="trendingScroll">
+        <article class="news-card">
+          <img src="/images/ee58a112-5e06-44ed-b4af-a5825ec34343.jfif" alt="Urban Scene" class="news-card__image" loading="lazy">
+          <div class="news-card__content">
+            <span class="news-card__badge">Polityka</span>
+            <h3 class="news-card__title">Trump zapowiada przełomowe zmiany w polityce USA</h3>
+            <span class="news-card__time">1 godzina temu</span>
+          </div>
+        </article>
+        <article class="news-card">
+          <img src="/images/7a7cbb51-8ae6-45e9-9afa-92f34dd48350.jfif" alt="Art and Culture" class="news-card__image" loading="lazy">
+          <div class="news-card__content">
+            <span class="news-card__badge">Design</span>
+            <h3 class="news-card__title">Współczesna architektura: Harmonia formy i funkcji</h3>
+            <span class="news-card__time">3 godziny temu</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="news-scroll">
+      <div class="news-scroll__container">
+        <div class="news-scroll__items">
+          <span class="news-scroll__item">🔴 Breaking: Najnowsze wydarzenia z kraju i ze świata</span>
+          <span class="news-scroll__item">📈 Notowania giełdowe: WIG20 wzrósł o 2.3%</span>
+          <span class="news-scroll__item">⚽ Liga Mistrzów: Wyniki meczów na żywo</span>
+          <span class="news-scroll__item">🌤️ Prognoza pogody: Upały w całym kraju</span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

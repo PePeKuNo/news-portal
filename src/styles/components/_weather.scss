@@ -1,0 +1,26 @@
+.weather {
+  @include flex(row, flex-start, center);
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: $light-bg;
+  border-radius: 4px;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__temp {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &__location {
+    font-size: 0.9rem;
+    color: rgba($text-color, 0.8);
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

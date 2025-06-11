@@ -1,0 +1,72 @@
+@import 'normalize.css';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/news-card';
+@import 'components/weather';
+
+// Add new component styles
+.trending-section {
+  padding: 2rem 1rem;
+  overflow: hidden;
+  background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .news-card {
+    flex: 0 0 300px;
+    
+    @include mobile {
+      flex: 0 0 280px;
+    }
+  }
+}

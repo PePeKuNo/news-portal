@@ -1,0 +1,57 @@
+.header {
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__container {
+    @include flex(row, space-between, center);
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include mobile {
+      padding: 0.5rem;
+    }
+  }
+
+  &__logo {
+    display: block;
+
+    img {
+      display: block;
+      width: 120px;
+      height: 40px;
+      object-fit: contain;
+
+      @include mobile {
+        width: 100px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__weather {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .weather {
+    &__icon {
+      width: 24px;
+      height: 24px;
+      animation: rotate 20s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
